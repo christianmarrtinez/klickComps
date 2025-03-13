@@ -359,6 +359,38 @@ popup: {
     fontWeight: 'bold',
     color: 'red',
   },
+  toggleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+  toggleButton: {
+    flex: 1,
+    paddingVertical: 10,
+    alignItems: 'center',
+  },
+  activeButton: {
+    backgroundColor: '#007AFF',
+    borderRadius: 5,
+  },
+  toggleText: {
+    fontSize: 16,
+    color: '#333',
+  },
+  activeText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  emptyText: {
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 16,
+    color: '#888',
+  },
+  
 
 
 });
