@@ -10,7 +10,7 @@ const StackNavigator = () => {
     return (
       <Stack.Navigator>
         <Stack.Screen name="Competitions" component={Competitions} />
-        <Stack.Screen name="CompetitionsDetails" component={CompetitionsDetails} />
+        <Stack.Screen name="CompetitionDetails" component={CompetitionsDetails} />
       </Stack.Navigator>
     );
   };

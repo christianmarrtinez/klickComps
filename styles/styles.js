@@ -271,6 +271,95 @@ popup: {
     color: '#1e6d54',
   },  
 
+  competitionCard: {
+    flexDirection: 'row',
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#91D9B1',
+    backgroundColor: 'white',
+    alignItems: 'center',
+  },
+  competitionImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 5,
+    marginRight: 10,
+  },
+  competitionContent: {
+    flex: 1,
+  },
+  competitionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  competitionNiche: {
+    fontSize: 14,
+    color: '#666',
+  },
+  brandRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  brandLogo: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    marginRight: 10,
+  },
+  brandName: {
+    fontSize: 14,
+    color: '#91D9B1',
+    fontWeight: 'bold',
+  },
+  prizeText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#1e6d54',
+    marginTop: 5,
+  },
+  competitionDetailsContainer: {
+    flexGrow: 1,
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#f5f5f5',
+  },
+  competitionDetailsImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  competitionDetailsTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  competitionDetailsNiche: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 10,
+  },
+  competitionDetailsText: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  competitionActive: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'green',
+  },
+  competitionInactive: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'red',
+  },
+
 
 });
 
