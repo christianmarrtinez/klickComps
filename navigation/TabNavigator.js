@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import Competitions from '../screens/Competitions';
 import Entries from '../screens/Entries';
 import Profiles from '../screens/Profiles';
-import BusinessProfile from '../screens/BusinessProfile'; // Business Profile screen
+import BusinessProfile from '../screens/BusinessProfile';
 import CompetitionDetails from '../screens/CompetitionDetails';
-import MyBrand from '../screens/MyBrand'; // Business owner "My Brand" screen
-import { TouchableOpacity } from 'react-native';
+import MyBrand from '../screens/MyBrand';
+import MyCompetitions from '../screens/MyCompetitions';
+import BizLeaderboard from '../screens/BizLeaderboard';
+import styles from '../styles/styles';
 
 const Tab = createBottomTabNavigator();
 const CompetitionStack = createNativeStackNavigator();
@@ -24,94 +27,97 @@ const CompetitionStackNavigator = () => (
       ),
     }}
   >
-    <CompetitionStack.Screen 
-      name="Competition Screen" 
-      component={Competitions} 
-    />
-    <CompetitionStack.Screen 
-      name="CompetitionDetails" 
-      component={CompetitionDetails} 
-      options={{ title: 'Competition Details' }} 
-    />
+    <CompetitionStack.Screen name="Competition Screen" component={Competitions} />
+    <CompetitionStack.Screen name="CompetitionDetails" component={CompetitionDetails} options={{ title: 'Competition Details' }} />
   </CompetitionStack.Navigator>
 );
 
 const TabNavigator = () => {
-  const [role, setRole] = useState('influencer'); // Default to 'influencer' role
+  const [role, setRole] = useState('influencer'); 
+  const [showSwitchPopup, setShowSwitchPopup] = useState(false);
 
-  const handleLongPress = () => {
-    setRole(prevRole => (prevRole === 'influencer' ? 'businessOwner' : 'influencer'));
+  const toggleRole = () => {
+    setRole((prevRole) => (prevRole === 'influencer' ? 'businessOwner' : 'influencer'));
+    setShowSwitchPopup(false); // Hide popup after switching
   };
 
   return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ color, size }) => {
-          let iconName;
-
-          if (route.name === 'Competitions') {
-            iconName = 'trophy-outline';
-          } else if (route.name === 'Entries') {
-            iconName = 'document-text-outline';
-          } else if (route.name === 'Profile') {
-            iconName = 'person-circle-outline';
-          }
-
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: '#1e6d54',
-        tabBarInactiveTintColor: '#91D9B1',
-        tabBarStyle: {
-          backgroundColor: 'white',
-          borderTopWidth: 1, 
-          borderTopColor: '#91D9B1',
-        },
-        tabBarItemStyle: {
-          borderRightWidth: route.name !== 'Settings' ? 1 : 0, 
-          borderRightColor: '#91D9B1',
-        },
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: 'bold',
-          color: '#91D9B1',
-        },
-      })}
-    >
-      <Tab.Screen 
-        name="Competitions" 
-        component={CompetitionStackNavigator}
-        options={{ headerShown: false }} 
-      />
-      <Tab.Screen 
-        name="Entries" 
-        component={Entries}
-        options={{ headerShown: false }} 
-      />
-      
-      {/* Conditionally render Profile screen or Business Profile screen */}
-      <Tab.Screen 
-        name="Profile" 
-        component={role === 'influencer' ? Profiles : BusinessProfile}
-        options={{
-          headerShown: false,
-          tabBarButton: (props) => (
-            <TouchableOpacity 
-              {...props} 
-              onLongPress={handleLongPress} // Long press to toggle role
+    <View style={{ flex: 1 }}>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ color, size }) => {
+            let iconName;
+            if (route.name === 'Competitions' || route.name === 'Biz Leaderboard') {
+              iconName = 'trophy-outline';
+            } else if (route.name === 'Entries' || route.name === 'My Competitions') {
+              iconName = 'document-text-outline';
+            } else if (route.name === 'Profile' || route.name === 'My Brand') {
+              iconName = 'person-circle-outline';
+            }
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: '#1e6d54',
+          tabBarInactiveTintColor: '#91D9B1',
+          tabBarStyle: {
+            backgroundColor: 'white',
+            borderTopWidth: 1,
+            borderTopColor: '#91D9B1',
+          },
+          tabBarLabelStyle: {
+            fontSize: 12,
+            fontWeight: 'bold',
+            color: '#91D9B1',
+          },
+        })}
+      >
+        {role === 'influencer' ? (
+          <>
+            <Tab.Screen name="Competitions" component={CompetitionStackNavigator} options={{ headerShown: false }} />
+            <Tab.Screen name="Entries" component={Entries} options={{ headerShown: false }} />
+            <Tab.Screen
+              name="Profile"
+              component={Profiles}
+              options={{
+                headerShown: false,
+                tabBarButton: (props) => (
+                  <TouchableOpacity
+                    {...props}
+                    onLongPress={() => setShowSwitchPopup(true)}
+                  />
+                ),
+              }}
             />
-          )
-        }} 
-      />
+          </>
+        ) : (
+          <>
+            <Tab.Screen name="Biz Leaderboard" component={BizLeaderboard} options={{ headerShown: false }} />
+            <Tab.Screen name="My Competitions" component={MyCompetitions} options={{ headerShown: false }} />
+            <Tab.Screen
+              name="My Brand"
+              component={MyBrand}
+              options={{
+                headerShown: false,
+                tabBarButton: (props) => (
+                  <TouchableOpacity
+                    {...props}
+                    onLongPress={() => setShowSwitchPopup(true)}
+                  />
+                ),
+              }}
+            />
+          </>
+        )}
+      </Tab.Navigator>
 
-      {/* Add the 'My Brand' tab for Business Owner role */}
-      {role === 'businessOwner' && (
-        <Tab.Screen 
-          name="My Brand" 
-          component={MyBrand}
-          options={{ headerShown: false }} 
-        />
+      {/* Pop-up switch button */}
+      {showSwitchPopup && (
+        <TouchableOpacity style={styles.popup} onPress={toggleRole}>
+          <Text style={styles.popupText}>
+            {role === 'influencer' ? 'Switch to Business Owner' : 'Switch to Influencer'}
+          </Text>
+        </TouchableOpacity>
       )}
-    </Tab.Navigator>
+    </View>
   );
 };
 
