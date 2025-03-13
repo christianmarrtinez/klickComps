@@ -251,6 +251,25 @@ profitButton: {
 profitText: {
   fontSize: 14,
 },
+popup: {
+    position: 'absolute',
+    bottom: 48, // Adjust to position above the tab bar
+    right: '.5', // Center it to match the tab width
+    width: '33%', // Make it same width as tabs
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderColor: '#91D9B1',
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+    paddingVertical: 10,
+    alignItems: 'center',
+  },
+
+  popupText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#1e6d54',
+  },  
 
 
 });
