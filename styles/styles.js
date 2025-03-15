@@ -1,4 +1,4 @@
-// green to remember: #91D9B1
+// green to remember: #8b51ff
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     borderWidth: 1, 
-    borderColor: '#91D9B1', 
+    borderColor: '#8b51ff', 
   },
   row: {
     flexDirection: 'row',
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
     fontSize: 16,
-    color: '#91D9B1',
+    color: '#8b51ff',
   },
   productContainer: {
     flexDirection: 'row',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#91D9B1',
+    borderColor: '#8b51ff',
     alignItems: 'center',
   },
   productContentContainer: {
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 8,
     borderWidth: 1, 
-    borderColor: '#91D9B1', 
+    borderColor: '#8b51ff', 
   },
   categoryText: {
     color: '#fff',
@@ -79,16 +79,16 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: '#91D9B1',
+    borderColor: '#8b51ff',
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
-    color: '#91D9B1',  
+    color: '#8b51ff',  
     backgroundColor: 'transparent',
   },
   searchButton: {
-    backgroundColor: '#91D9B1',
+    backgroundColor: '#8b51ff',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   price: {
-    color: '#91D9B1',
+    color: '#8b51ff',
     fontSize: 14,
     marginTop: 4,
   },
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#91D9B1',
+    borderBottomColor: '#8b51ff',
   },
   icon: {
     marginRight: 15,
@@ -217,18 +217,18 @@ paginationContainer: {
 arrow: {
   fontSize: 18,
   paddingHorizontal: 10,
-  color: '#91D9B1', 
+  color: '#8b51ff', 
 },
 pageNumber: {
   padding: 10,
   marginHorizontal: 5,
   borderWidth: 1,
-  borderColor: '#91D9B1', 
+  borderColor: '#8b51ff', 
   borderRadius: 5,
   color: 'black', 
 },
 activePageNumber: {
-  backgroundColor: '#91D9B1', 
+  backgroundColor: '#8b51ff', 
   color: 'white',
   borderColor: 'black',
   fontWeight: 'bold', 
@@ -258,7 +258,7 @@ popup: {
     width: '33%', // Make it same width as tabs
     backgroundColor: 'white',
     borderWidth: 1,
-    borderColor: '#91D9B1',
+    borderColor: '#8b51ff',
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
     paddingVertical: 10,
@@ -268,7 +268,7 @@ popup: {
   popupText: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#1e6d54',
+    color: '#6A33CC',
   },  
 
   competitionCard: {
@@ -277,7 +277,7 @@ popup: {
     marginBottom: 10,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#91D9B1',
+    borderColor: '#8b51ff',
     backgroundColor: 'white',
     alignItems: 'center',
   },
@@ -312,13 +312,13 @@ popup: {
   },
   brandName: {
     fontSize: 14,
-    color: '#91D9B1',
+    color: '#8b51ff',
     fontWeight: 'bold',
   },
   prizeText: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#1e6d54',
+    color: '#6A33CC',
     marginTop: 5,
   },
   competitionDetailsContainer: {
@@ -373,7 +373,7 @@ popup: {
     alignItems: 'center',
   },
   activeButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#8b51ff',
     borderRadius: 5,
   },
   toggleText: {
@@ -390,6 +390,23 @@ popup: {
     fontSize: 16,
     color: '#888',
   },
+  sectionContainer: {
+    padding: 15,
+    marginVertical: 10,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#ddd',
+},
+sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+},
+sectionText: {
+    fontSize: 16,
+    lineHeight: 24,
+},
   
 
 

@@ -39,13 +39,13 @@ const Competitions = () => {
           style={[styles.toggleButton, showActive && styles.activeButton]} 
           onPress={() => setShowActive(true)}
         >
-          <Text style={[styles.toggleText, showActive && styles.activeText]}>Active Competitions</Text>
+          <Text style={[styles.toggleText, showActive && styles.activeText]}>Active</Text>
         </Pressable>
         <Pressable 
           style={[styles.toggleButton, !showActive && styles.activeButton]} 
           onPress={() => setShowActive(false)}
         >
-          <Text style={[styles.toggleText, !showActive && styles.activeText]}>Inactive Competitions</Text>
+          <Text style={[styles.toggleText, !showActive && styles.activeText]}>Inactive</Text>
         </Pressable>
       </View>
 

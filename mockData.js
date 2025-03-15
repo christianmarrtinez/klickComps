@@ -1,40 +1,60 @@
 const mockData = {
     competitions: [
-      {
-        id: 1,
-        cover: 'https://via.placeholder.com/300x200.png?text=Competition+1',
-        name: 'Design a New Logo',
-        niche: 'Graphic Design',
-        brandLogo: 'https://via.placeholder.com/50.png?text=Brand+1',
-        brandName: 'Creative Agency',
-        prize: 500,
-        date: '2025-03-10',
-        active: true,
-      },
-      {
-        id: 2,
-        cover: 'https://via.placeholder.com/300x200.png?text=Competition+2',
-        name: 'Best Startup Pitch',
-        niche: 'Entrepreneurship',
-        brandLogo: 'https://via.placeholder.com/50.png?text=Brand+2',
-        brandName: 'Startup Inc.',
-        prize: 1000,
-        date: '2025-02-28',
-        active: false,
-      },
-      {
-        id: 3,
-        cover: 'https://via.placeholder.com/300x200.png?text=Competition+3',
-        name: 'Ultimate Coding Challenge',
-        niche: 'Software Development',
-        brandLogo: 'https://via.placeholder.com/50.png?text=Brand+3',
-        brandName: 'Tech Innovators',
-        prize: 2000,
-        date: '2025-01-15',
-        active: false,
-      },
+        {
+            id: 1,
+            cover: 'https://via.placeholder.com/300x200.png?text=Competition+1',
+            name: 'Design a New Logo',
+            niche: 'Graphic Design',
+            brandLogo: 'https://via.placeholder.com/50.png?text=Brand+1',
+            brandName: 'Creative Agency',
+            prize: 500,
+            date: '2025-03-10',
+            active: true,
+            comp_descrip: 'Create a modern and memorable logo for our agency. Must be original and reflect our brand values of creativity and innovation. Submit your designs in PNG format.',
+            entry_examp: 'Examples: A minimalist logo with a vibrant color palette. A geometric logo with a hidden message. A logo that combines text and abstract shapes.',
+            prize_distribution: [
+                { place: 1, amount: 250 },
+                { place: 2, amount: 150 },
+                { place: 3, amount: 100 },
+            ],
+        },
+        {
+            id: 2,
+            cover: 'https://via.placeholder.com/300x200.png?text=Competition+2',
+            name: 'Best Startup Pitch',
+            niche: 'Entrepreneurship',
+            brandLogo: 'https://via.placeholder.com/50.png?text=Brand+2',
+            brandName: 'Startup Inc.',
+            prize: 1000,
+            date: '2025-02-28',
+            active: false,
+            comp_descrip: 'Pitch your innovative startup idea to our panel of investors. Focus on market potential, scalability, and financial projections. Presentations should be 5-10 minutes.',
+            entry_examp: 'Examples: A pitch deck with clear visuals and data. A compelling story that highlights the problem and solution. A live demo of the product or service.',
+            prize_distribution: [
+                { place: 1, amount: 500 },
+                { place: 2, amount: 300 },
+                { place: 3, amount: 200 },
+            ],
+        },
+        {
+            id: 3,
+            cover: 'https://via.placeholder.com/300x200.png?text=Competition+3',
+            name: 'Ultimate Coding Challenge',
+            niche: 'Software Development',
+            brandLogo: 'https://via.placeholder.com/50.png?text=Brand+3',
+            brandName: 'Tech Innovators',
+            prize: 2000,
+            date: '2025-01-15',
+            active: false,
+            comp_descrip: 'Solve a complex coding problem within a given time limit. Focus on efficiency, code quality, and problem-solving skills. Solutions should be submitted in a GitHub repository.',
+            entry_examp: 'Examples: A well-documented codebase with unit tests. An algorithm that optimizes performance. A creative solution that goes beyond the requirements.',
+            prize_distribution: [
+                { place: 1, amount: 1000 },
+                { place: 2, amount: 600 },
+                { place: 3, amount: 400 },
+            ],
+        },
     ],
-  };
-  
-  export default mockData;
-  
+};
+
+export default mockData;

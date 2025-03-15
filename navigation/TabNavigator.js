@@ -56,17 +56,17 @@ const TabNavigator = () => {
               }
               return <Ionicons name={iconName} size={size} color={color} />;
             },
-            tabBarActiveTintColor: '#1e6d54',
-            tabBarInactiveTintColor: '#91D9B1',
+            tabBarActiveTintColor: '#D496FF',
+            tabBarInactiveTintColor: '#8b51ff',
             tabBarStyle: {
               backgroundColor: 'white',
               borderTopWidth: 1,
-              borderTopColor: '#91D9B1',
+              borderTopColor: '#8b51ff',
             },
             tabBarLabelStyle: {
               fontSize: 12,
               fontWeight: 'bold',
-              color: '#91D9B1',
+              color: '#8b51ff',
             },
           })}
           screenListeners={{
