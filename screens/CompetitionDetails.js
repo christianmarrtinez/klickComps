@@ -26,12 +26,6 @@ const CompetitionDetails = ({ route }) => {
                 <Text style={styles.sectionText}>{competition.comp_descrip}</Text>
             </View>
 
-            {/* Accepted Entry Examples */}
-            <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Accepted Entry Examples</Text>
-                <Text style={styles.sectionText}>{competition.entry_examp}</Text>
-            </View>
-
             {/* Prize Winnings Distribution */}
             <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Prize Winnings Distribution</Text>
@@ -40,6 +34,18 @@ const CompetitionDetails = ({ route }) => {
                         {item.place} Place: ${item.amount}
                     </Text>
                 ))}
+            </View>
+
+            {/* Accepted Entry Examples */}
+            <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>Accepted Entry Examples</Text>
+                <Text style={styles.sectionText}>{competition.entry_examp}</Text>
+            </View>
+
+            {/* Rules */}
+            <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>Rules</Text>
+                <Text style={styles.sectionText}>{competition.rules}</Text>
             </View>
         </ScrollView>
     );

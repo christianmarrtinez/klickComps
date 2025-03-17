@@ -17,6 +17,7 @@ const mockData = {
                 { place: 2, amount: 150 },
                 { place: 3, amount: 100 },
             ],
+            rules: 'Entries must be original and not infringe on any existing copyrights. Logos must be submitted in PNG format with a minimum resolution of 300 DPI. The competition is open to designers of all skill levels.',
         },
         {
             id: 2,
@@ -35,6 +36,7 @@ const mockData = {
                 { place: 2, amount: 300 },
                 { place: 3, amount: 200 },
             ],
+            rules: 'Pitches must be original and not based on existing business models. Teams must consist of 2-5 members. Presentations should be in English. All financial projections must be realistic and supported by data.',
         },
         {
             id: 3,
@@ -53,6 +55,7 @@ const mockData = {
                 { place: 2, amount: 600 },
                 { place: 3, amount: 400 },
             ],
+            rules: 'Solutions must be written in Python or JavaScript. Code must be well-documented and follow best practices. Participants must not use any external libraries or frameworks. Solutions must be submitted within the given time limit.',
         },
     ],
 };
