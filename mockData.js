@@ -58,6 +58,16 @@ const mockData = {
             rules: 'Solutions must be written in Python or JavaScript. Code must be well-documented and follow best practices. Participants must not use any external libraries or frameworks. Solutions must be submitted within the given time limit.',
         },
     ],
+    linked_accounts: [
+        { id: 1, profile_id: 101, social: 'ig', username: 'user1_ig', profile_pic: 'https://via.placeholder.com/50.png?text=IG' },
+        { id: 2, profile_id: 101, social: 'tik', username: 'user1_tik', profile_pic: 'https://via.placeholder.com/50.png?text=TIK' },
+        { id: 3, profile_id: 102, social: 'snap', username: 'user2_snap', profile_pic: 'https://via.placeholder.com/50.png?text=SNAP' },
+        { id: 4, profile_id: 102, social: 'ig', username: 'user2_ig', profile_pic: 'https://via.placeholder.com/50.png?text=IG' },
+    ],
+    submitted_entries: [
+        { id: 1, competition_id: 1, profile_id: 101, submitted_at: '2025-03-15T10:00:00Z', active: true, views: 1500 },
+        { id: 2, competition_id: 2, profile_id: 102, submitted_at: '2025-03-16T11:00:00Z', active: false, views: 800 },
+    ],
 };
 
 export default mockData;

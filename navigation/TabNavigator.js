@@ -10,6 +10,10 @@ import CompetitionDetails from '../screens/CompetitionDetails';
 import MyBrand from '../screens/MyBrand';
 import MyCompetitions from '../screens/MyCompetitions';
 import BizLeaderboard from '../screens/BizLeaderboard';
+import SubmitComp from '../screens/SubmitComp';
+import SC_ig from '../screens/SC_ig';
+import SC_snap from '../screens/SC_snap';
+import SC_tik from '../screens/SC_tik';
 import styles from '../styles/styles';
 
 const Tab = createBottomTabNavigator();
@@ -28,6 +32,10 @@ const CompetitionStackNavigator = () => (
   >
     <CompetitionStack.Screen name="Competition Screen" component={Competitions} />
     <CompetitionStack.Screen name="CompetitionDetails" component={CompetitionDetails} options={{ title: 'Competition Details' }} />
+    <CompetitionStack.Screen name="SubmitComp" component={SubmitComp} />
+    <CompetitionStack.Screen name="SC_ig" component={SC_ig} />
+    <CompetitionStack.Screen name="SC_snap" component={SC_snap} />
+    <CompetitionStack.Screen name="SC_tik" component={SC_tik} />
   </CompetitionStack.Navigator>
 );
 

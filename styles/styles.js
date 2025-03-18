@@ -407,6 +407,20 @@ sectionText: {
     fontSize: 16,
     lineHeight: 24,
 },
+submitButton: {
+  backgroundColor: '#8b51ff',
+  padding: 15,
+  alignItems: 'center',
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  right: 0,
+},
+submitButtonText: {
+  color: 'white',
+  fontSize: 18,
+  fontWeight: 'bold',
+},
   
 
 
