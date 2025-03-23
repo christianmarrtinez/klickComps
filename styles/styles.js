@@ -421,7 +421,30 @@ submitButtonText: {
   fontSize: 18,
   fontWeight: 'bold',
 },
-  
+accountButton: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  padding: 15,
+  borderBottomWidth: 1,
+  borderBottomColor: '#ccc',
+},
+accountImage: {
+  width: 40,
+  height: 40,
+  borderRadius: 20,
+  marginRight: 15,
+},
+accountUsername: {
+  fontSize: 16,
+},
+accountList: {
+  paddingVertical: 10,
+},
+submitCompTitle: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  marginBottom: 20,
+},
 
 
 });

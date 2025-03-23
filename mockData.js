@@ -59,10 +59,10 @@ const mockData = {
         },
     ],
     linked_accounts: [
-        { id: 1, profile_id: 101, social: 'ig', username: 'user1_ig', profile_pic: 'https://via.placeholder.com/50.png?text=IG' },
-        { id: 2, profile_id: 101, social: 'tik', username: 'user1_tik', profile_pic: 'https://via.placeholder.com/50.png?text=TIK' },
-        { id: 3, profile_id: 102, social: 'snap', username: 'user2_snap', profile_pic: 'https://via.placeholder.com/50.png?text=SNAP' },
-        { id: 4, profile_id: 102, social: 'ig', username: 'user2_ig', profile_pic: 'https://via.placeholder.com/50.png?text=IG' },
+        { id: 1, profile_id: 101, social: 'ig', username: 'user1_ig', profile_pic: require('./assets/images/instagram.png') },
+        { id: 2, profile_id: 101, social: 'tik', username: 'user1_tik', profile_pic: require('./assets/images/tiktok.png') },
+        { id: 3, profile_id: 102, social: 'snap', username: 'user2_snap', profile_pic: require('./assets/images/snapchat.png') },
+        { id: 4, profile_id: 102, social: 'ig', username: 'user2_ig', profile_pic: require('./assets/images/instagram.png') },
     ],
     submitted_entries: [
         { id: 1, competition_id: 1, profile_id: 101, submitted_at: '2025-03-15T10:00:00Z', active: true, views: 1500 },
