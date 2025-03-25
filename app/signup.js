@@ -4,9 +4,11 @@ import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
 import styles from '../styles/styles';
 import mockData from '../mockData';
+import { useNavigation } from '@react-navigation/native';
 
 const SignUp = () => {
   const router = useRouter();
+  const navigation = useNavigation();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -66,7 +68,7 @@ const SignUp = () => {
         <Text style={styles.authButtonText}>Sign Up</Text>
       </TouchableOpacity>
       
-      <TouchableOpacity onPress={() => router.push('signin')}>
+      <TouchableOpacity onPress={() => router.push('/signin')}>
         <Text style={styles.authLink}>Already have an account? Sign In</Text>
       </TouchableOpacity>
     </View>

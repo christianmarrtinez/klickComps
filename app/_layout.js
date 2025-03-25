@@ -10,16 +10,15 @@ function useProtectedRoute() {
   const router = useRouter();
 
   useEffect(() => {
-    const inAuthGroup = segments[0] === "(auth)";
-    
-    // If there's no current profile and we're not in the auth group,
-    // redirect to the auth group
-    if (!global.currentProfile && !inAuthGroup) {
-      router.replace("/signup");
-    } else if (global.currentProfile && inAuthGroup) {
-      // If there is a current profile and we're in the auth group,
-      // redirect to the protected screens
-      router.replace("/main");
+    console.log("Segments:", segments); // Debugging
+    const inAuthFlow = segments[0] === "signup" || segments[0] === "signin"; // Allow both
+
+    // If not authenticated and NOT in signup or signin, force redirect to signup
+    if (!global.currentProfile && !inAuthFlow) {
+      router.replace("signup"); // No "/" needed
+    } else if (global.currentProfile && inAuthFlow) {
+      // If authenticated and still in signup/signin, go to main
+      router.replace("main");
     }
   }, [segments]);
 }

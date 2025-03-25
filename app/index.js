@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Stack.Navigator initialRouteName="SignUp" screenOptions={{ headerShown: false }}>
       <Stack.Screen name="SignUp" component={SignUp} />
-      <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen name="signin" component={SignIn} />
       <Stack.Screen name="Main" component={TabNavigator} />
     </Stack.Navigator>
   );
