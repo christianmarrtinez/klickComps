@@ -58,6 +58,22 @@ const mockData = {
             rules: 'Solutions must be written in Python or JavaScript. Code must be well-documented and follow best practices. Participants must not use any external libraries or frameworks. Solutions must be submitted within the given time limit.',
         },
     ],
+    profiles: [
+        {
+          id: 101,
+          username: 'user1',
+          password: 'password1', 
+          name: 'User One',
+          avatar: 'https://via.placeholder.com/100.png?text=User1'
+        },
+        {
+          id: 102,
+          username: 'user2',
+          password: 'password2',
+          name: 'User Two',
+          avatar: 'https://via.placeholder.com/100.png?text=User2'
+        }
+      ],
     linked_accounts: [
         { id: 1, profile_id: 101, social: 'ig', username: 'user1_ig', profile_pic: require('./assets/images/instagram.png') },
         { id: 2, profile_id: 101, social: 'tik', username: 'user1_tik', profile_pic: require('./assets/images/tiktok.png') },

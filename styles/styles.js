@@ -445,7 +445,49 @@ submitCompTitle: {
   fontWeight: 'bold',
   marginBottom: 20,
 },
-
+authContainer: {
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: 20,
+  backgroundColor: 'white',
+},
+authTitle: {
+  fontSize: 24,
+  fontWeight: 'bold',
+  marginBottom: 30,
+  color: '#8b51ff',
+},
+authInput: {
+  width: '100%',
+  height: 50,
+  borderColor: '#8b51ff',
+  borderWidth: 1,
+  borderRadius: 8,
+  marginBottom: 15,
+  paddingHorizontal: 15,
+  fontSize: 16,
+},
+authButton: {
+  width: '100%',
+  height: 50,
+  backgroundColor: '#8b51ff',
+  borderRadius: 8,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: 10,
+  marginBottom: 20,
+},
+authButtonText: {
+  color: 'white',
+  fontSize: 18,
+  fontWeight: 'bold',
+},
+authLink: {
+  color: '#8b51ff',
+  fontSize: 16,
+  marginTop: 20,
+},
 
 });
 
