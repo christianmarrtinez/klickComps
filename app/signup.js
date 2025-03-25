@@ -17,32 +17,35 @@ const SignUp = () => {
       Alert.alert('Error', 'Please fill in all fields');
       return;
     }
-
+  
     // Check if username already exists
     const existingUser = mockData.profiles.find(profile => profile.username === username);
     if (existingUser) {
       Alert.alert('Error', 'Username already exists');
       return;
     }
-
-    // Create new profile (in a real app, you'd make an API call)
+  
+    // Create new profile
     const newProfile = {
-      id: mockData.profiles.length + 100 + 1, // Simple ID generation
+      id: mockData.profiles.length + 101, // Ensuring unique ID
       username,
       password,
-      name: username, // Default name is username
-      avatar: 'https://via.placeholder.com/100.png?text=' + username
+      name: username, 
+      avatar: `https://via.placeholder.com/100.png?text=${username}`,
     };
-
-    // Add to mockData (for demo purposes)
+  
+    // Add to profiles array
     mockData.profiles.push(newProfile);
-
-    // Store current user
+  
+    // Store the current profile globally
     global.currentProfile = newProfile;
-
+  
+    console.log("Updated Profiles:", mockData.profiles); // Debugging
+  
     // Navigate to main app
     router.replace('/main');
   };
+  
 
   return (
     <View style={styles.authContainer}>

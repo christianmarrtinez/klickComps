@@ -1,12 +1,12 @@
 // screens/SignIn.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useRouter } from 'expo-router';
 import styles from '../styles/styles';
 import mockData from '../mockData';
 
 const SignIn = () => {
-  const navigation = useNavigation();
+  const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,7 +16,6 @@ const SignIn = () => {
       return;
     }
 
-    // Find user in profiles
     const user = mockData.profiles.find(
       profile => profile.username === username && profile.password === password
     );
@@ -26,14 +25,10 @@ const SignIn = () => {
       return;
     }
 
-    // Store current user
     global.currentProfile = user;
 
-    // Navigate to main app
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Main' }],
-    });
+    // Navigate to main app using expo-router
+    router.replace('/main'); 
   };
 
   return (
