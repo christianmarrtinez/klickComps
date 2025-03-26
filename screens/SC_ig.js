@@ -1,3 +1,4 @@
+// SC_ig.js
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -10,18 +11,20 @@ const SC_ig = () => {
     const { competitionId } = route.params;
     const [selectedPost, setSelectedPost] = useState(null);
 
-    const posts = [
-        { id: 1, imageUrl: 'https://via.placeholder.com/150.png?text=Post1' },
-        { id: 2, imageUrl: 'https://via.placeholder.com/150.png?text=Post2' },
-        { id: 3, imageUrl: 'https://via.placeholder.com/150.png?text=Post3' },
-    ];
+    const profileId = global.currentProfile.id;
+    const linkedAccount = mockData.linked_accounts.find(
+        (account) => account.profile_id === profileId && account.social === 'ig'
+    );
+
+    const posts = mockData.content.filter(
+        (item) => item.profile_id === profileId && item.linked_account_id === linkedAccount.id
+    );
 
     const handlePostSelect = (postId) => {
         setSelectedPost(postId === selectedPost ? null : postId);
     };
 
     const handleFinalizeSubmission = () => {
-        // Logic to submit the selected post to the competition
         console.log(`Submitted post ${selectedPost} to competition ${competitionId}`);
         navigation.goBack();
     };
@@ -29,25 +32,28 @@ const SC_ig = () => {
     return (
         <View style={{ flex: 1 }}>
             <ScrollView contentContainerStyle={{ alignItems: 'center', padding: 20 }}>
+                {/* Linked Account Info */}
+                <View style={styles.linkedAccountRow}>
+                    <Image source={linkedAccount.profile_pic} style={styles.linkedAccountImage} />
+                    <Text style={styles.linkedAccountUsername}>{linkedAccount.username}</Text>
+                </View>
+
+                {/* Posts */}
                 {posts.map((post) => (
                     <TouchableOpacity
                         key={post.id}
                         onPress={() => handlePostSelect(post.id)}
-                        style={{
-                            margin: 10,
-                            borderWidth: selectedPost === post.id ? 2 : 0,
-                            borderColor: 'purple',
-                        }}
+                        style={styles.postContainer}
                     >
-                        <Image source={{ uri: post.imageUrl }} style={{ width: 150, height: 150 }} />
+                        <Image source={{ uri: post.preview_pic }} style={styles.postImage} />
+                        <View style={styles.postOverlay}>
+                            <Text style={styles.postViews}>{post.views} views</Text>
+                        </View>
                     </TouchableOpacity>
                 ))}
             </ScrollView>
             {selectedPost && (
-                <TouchableOpacity
-                    style={styles.submitButton}
-                    onPress={handleFinalizeSubmission}
-                >
+                <TouchableOpacity style={styles.submitButton} onPress={handleFinalizeSubmission}>
                     <Text style={styles.submitButtonText}>Finalize Submission</Text>
                 </TouchableOpacity>
             )}

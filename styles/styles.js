@@ -488,6 +488,42 @@ authLink: {
   fontSize: 16,
   marginTop: 20,
 },
+postContainer: {
+  position: 'relative', // Add relative positioning to the container
+  margin: 10,
+},
+postImage: {
+  width: 150,
+  height: 150,
+},
+postOverlay: {
+  position: 'absolute',
+  bottom: 5,
+  left: 5,
+  backgroundColor: 'rgba(0,0,0,0.6)',
+  padding: 5,
+  borderRadius: 5,
+},
+postViews: {
+  color: 'white',
+  fontSize: 12,
+},
+linkedAccountRow: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  padding: 10,
+  borderBottomWidth: 1,
+  borderBottomColor: '#ccc',
+},
+linkedAccountImage: {
+  width: 50,
+  height: 50,
+  borderRadius: 25,
+  marginRight: 10,
+},
+linkedAccountUsername: {
+  fontSize: 16,
+},
 
 });
 
