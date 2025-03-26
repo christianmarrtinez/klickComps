@@ -38,6 +38,7 @@ const SignIn = () => {
       <TextInput
         style={styles.authInput}
         placeholder="Username"
+        placeholderTextColor='#8b51ff'
         value={username}
         onChangeText={setUsername}
         autoCapitalize="none"
@@ -46,6 +47,7 @@ const SignIn = () => {
       <TextInput
         style={styles.authInput}
         placeholder="Password"
+        placeholderTextColor='#8b51ff'
         value={password}
         onChangeText={setPassword}
         secureTextEntry
@@ -55,7 +57,7 @@ const SignIn = () => {
         <Text style={styles.authButtonText}>Sign In</Text>
       </TouchableOpacity>
       
-      <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+      <TouchableOpacity onPress={() => router.push('/signup')}>
         <Text style={styles.authLink}>Don't have an account? Sign Up</Text>
       </TouchableOpacity>
     </View>

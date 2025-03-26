@@ -54,6 +54,7 @@ const SignUp = () => {
       <TextInput
         style={styles.authInput}
         placeholder="Username"
+        placeholderTextColor='#8b51ff'
         value={username}
         onChangeText={setUsername}
         autoCapitalize="none"
@@ -62,6 +63,7 @@ const SignUp = () => {
       <TextInput
         style={styles.authInput}
         placeholder="Password"
+        placeholderTextColor='#8b51ff'
         value={password}
         onChangeText={setPassword}
         secureTextEntry
