@@ -79,18 +79,12 @@ const SC_snap = () => {
                     onError={(e) => console.log('Failed to load image:', e.nativeEvent.error)}
                     resizeMode="cover"
                 />
-                <Text style={{
-                    position: 'absolute',
-                    top: 2,
-                    right: 2,
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    color: 'white',
-                    fontSize: 10,
-                    padding: 2,
-                    borderRadius: 3
-                }}>
-                    {item.id}
-                </Text>
+                <View style={styles.postOverlay}>
+                            <Text style={styles.postViews}>{item.views} views</Text>
+                        </View>
+      
+                // {item.id}
+              
             </TouchableOpacity>
         );
     };

@@ -90,13 +90,13 @@ const mockData = {
         { id: 7, profile_id: 102, linked_account_id: 3, preview_pic: 'content3.png', views: 1100 },
         { id: 8, profile_id: 102, linked_account_id: 3, preview_pic: 'content3.png', views: 700 },
         { id: 9, profile_id: 102, linked_account_id: 3, preview_pic: 'content3.png', views: 2200 },
-        { id: 10, profile_id: 102, linked_account_id: 4, preview_pic: 'https://via.placeholder.com/150.png?text=IG+Post+4', views: 1300 },
-        { id: 11, profile_id: 102, linked_account_id: 4, preview_pic: 'https://via.placeholder.com/150.png?text=IG+Post+5', views: 850 },
-        { id: 12, profile_id: 102, linked_account_id: 4, preview_pic: 'https://via.placeholder.com/150.png?text=IG+Post+6', views: 1900 },
+        { id: 10, profile_id: 102, linked_account_id: 4, preview_pic: 'content1.png', views: 1300 },
+        { id: 11, profile_id: 102, linked_account_id: 4, preview_pic: 'content2.png', views: 850 },
+        { id: 12, profile_id: 102, linked_account_id: 4, preview_pic: 'content3.png', views: 1900 },
     ],
     submitted_entries: [
-        { id: 1, competition_id: 1, profile_id: 101, submitted_at: '2025-03-15T10:00:00Z', active: true, views: 1500 },
-        { id: 2, competition_id: 2, profile_id: 102, submitted_at: '2025-03-16T11:00:00Z', active: false, views: 800 },
+        { id: 1, competition_id: 1, profile_id: 101, content_id: 3, submitted_at: '2025-03-15T10:00:00Z', active: true, views: 1500 },
+        { id: 2, competition_id: 2, profile_id: 102, content_id: 8, submitted_at: '2025-03-16T11:00:00Z', active: false, views: 800 },
     ],
 };
 
