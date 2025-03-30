@@ -488,14 +488,28 @@ authLink: {
   fontSize: 16,
   marginTop: 20,
 },
-postContainer: {
-  position: 'relative', // Add relative positioning to the container
-  margin: 10,
-},
-postImage: {
-  width: 150,
-  height: 150,
-},
+  // New styles for SC_snap.js
+  gridContainer: {
+    alignItems: 'center',
+    paddingBottom: 80, // Add space for the submit button
+  },
+  postContainer: {
+    margin: 5,
+    width: 100,
+    height: 100,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 5,
+    overflow: 'hidden',
+  },
+  selectedPost: {
+    borderColor: '#8b51ff',
+    borderWidth: 2,
+  },
+  postImage: {
+    width: '100%',
+    height: '100%',
+  },
 postOverlay: {
   position: 'absolute',
   bottom: 5,
