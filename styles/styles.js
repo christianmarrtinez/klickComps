@@ -538,6 +538,28 @@ linkedAccountImage: {
 linkedAccountUsername: {
   fontSize: 16,
 },
+leaderboardItem: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  padding: 15,
+  marginBottom: 10,
+  backgroundColor: 'white',
+  borderRadius: 8,
+  borderWidth: 1,
+  borderColor: '#ddd',
+},
+leaderboardPosition: {
+  fontSize: 18,
+  fontWeight: 'bold',
+  width: 30,
+  textAlign: 'center',
+},
+leaderboardAvatar: {
+  width: 50,
+  height: 50,
+  borderRadius: 25,
+  marginRight: 10,
+},
 
 });
 
