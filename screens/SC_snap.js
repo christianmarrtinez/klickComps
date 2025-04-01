@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Image, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, Image, FlatList, Alert } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import styles from '../styles/styles';
 import mockData from '../mockData';
@@ -38,9 +38,45 @@ const SC_snap = () => {
     };
 
     const handleFinalizeSubmission = () => {
-        console.log(`Submitted post ${selectedPost} to competition ${competitionId}`);
+        if (!selectedPost) return;
+    
+        const selectedPostData = posts.find(post => post.id === selectedPost);
+        if (!selectedPostData) return;
+    
+        // Check if the user has already submitted an entry for this competition
+        const existingSubmission = mockData.submitted_entries.find(
+            (entry) => entry.competition_id === competitionId && entry.profile_id === profileId
+        );
+    
+        if (existingSubmission) {
+            Alert.alert(
+                "Submission Error",
+                "You already submitted an entry for this post, only one post is allowed per competition from each user. If you would like to submit a new entry please delete your prior one but first make sure your new entry was posted within 48 hours of the current date time."
+            );
+            return;
+        }
+    
+        const newSubmissionId = mockData.submitted_entries.length 
+            ? Math.max(...mockData.submitted_entries.map(entry => entry.id)) + 1 
+            : 1;
+    
+        const newSubmission = {
+            id: newSubmissionId,
+            competition_id: competitionId,
+            profile_id: profileId,
+            content_id: selectedPostData.id,
+            submitted_at: new Date().toISOString(),
+            active: true,
+            views: selectedPostData.views,
+        };
+    
+        // Add new submission to mockData
+        mockData.submitted_entries.push(newSubmission);
+    
+        console.log('New Submission:', newSubmission);
         navigation.goBack();
     };
+    
 
     const getImageSource = (previewPic) => {
         // If it's already a require result (number), return it
@@ -83,7 +119,7 @@ const SC_snap = () => {
                             <Text style={styles.postViews}>{item.views} views</Text>
                         </View>
       
-                // {item.id}
+               
               
             </TouchableOpacity>
         );

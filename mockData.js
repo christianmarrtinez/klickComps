@@ -97,6 +97,7 @@ const mockData = {
     submitted_entries: [
         { id: 1, competition_id: 1, profile_id: 101, content_id: 3, submitted_at: '2025-03-15T10:00:00Z', active: true, views: 1500 },
         { id: 2, competition_id: 2, profile_id: 102, content_id: 8, submitted_at: '2025-03-16T11:00:00Z', active: false, views: 800 },
+        {id: 3, competition_id: 1, profile_id: 102, content_id: 9, submitted_at: "2025-04-01T21:25:50.213Z", active: true, views: 2200}
     ],
 };
 
