@@ -57,7 +57,7 @@ const TabNavigator = () => {
               let iconName;
               if (route.name === 'Competitions' || route.name === 'Biz Leaderboard') {
                 iconName = 'trophy-outline';
-              } else if (route.name === 'Entries' || route.name === 'My Competitions') {
+              } else if (route.name === 'My Entries' || route.name === 'My Competitions') {
                 iconName = 'document-text-outline';
               } else if (route.name === 'Profile' || route.name === 'My Brand') {
                 iconName = 'person-circle-outline';
@@ -90,7 +90,7 @@ const TabNavigator = () => {
           {role === 'influencer' ? (
             <>
               <Tab.Screen name="Competitions" component={CompetitionStackNavigator} options={{ headerShown: false }} />
-              <Tab.Screen name="Entries" component={Entries} options={{ headerShown: false }} />
+              <Tab.Screen name="My Entries" component={Entries} options={{ headerShown: false }} />
               <Tab.Screen
                 name="Profile"
                 component={Profiles}
