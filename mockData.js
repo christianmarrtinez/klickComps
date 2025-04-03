@@ -75,10 +75,10 @@ const mockData = {
         }
       ],
     linked_accounts: [
-        { id: 1, profile_id: 101, social: 'ig', username: 'user1_ig', profile_pic: require('./assets/images/instagram.png') },
-        { id: 2, profile_id: 101, social: 'tik', username: 'user1_tik', profile_pic: require('./assets/images/tiktok.png') },
-        { id: 3, profile_id: 102, social: 'snap', username: 'user2_snap', profile_pic: require('./assets/images/snapchat.png') },
-        { id: 4, profile_id: 102, social: 'ig', username: 'user2_ig', profile_pic: require('./assets/images/instagram.png') },
+        { id: 1, profile_id: 101, social: 'ig', username: 'user1_ig', followers: 1500, profile_pic: require('./assets/images/instagram.png') },
+        { id: 2, profile_id: 101, social: 'tik', username: 'user1_tik', followers: 180000, profile_pic: require('./assets/images/tiktok.png') },
+        { id: 3, profile_id: 102, social: 'snap', username: 'user2_snap', followers: 377085, profile_pic: require('./assets/images/snapchat.png') },
+        { id: 4, profile_id: 102, social: 'ig', username: 'user2_ig', followers: 555093, profile_pic: require('./assets/images/instagram.png') },
     ],
     content: [
         { id: 1, profile_id: 101, linked_account_id: 1, preview_pic: 'content1.png', views: 1200 },
