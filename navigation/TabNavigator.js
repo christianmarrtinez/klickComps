@@ -18,6 +18,7 @@ import styles from '../styles/styles';
 
 const Tab = createBottomTabNavigator();
 const CompetitionStack = createNativeStackNavigator();
+const EntriesStack = createNativeStackNavigator();
 
 const CompetitionStackNavigator = () => (
   <CompetitionStack.Navigator
@@ -37,6 +38,26 @@ const CompetitionStackNavigator = () => (
     <CompetitionStack.Screen name="SC_snap" component={SC_snap} />
     <CompetitionStack.Screen name="SC_tik" component={SC_tik} />
   </CompetitionStack.Navigator>
+);
+
+const EntriesStackNavigator = () => (
+  <EntriesStack.Navigator
+    screenOptions={{
+      headerTintColor: '#28353d',
+      headerTitleStyle: { color: '#fff' },
+      headerBackTitleStyle: { color: '#28353d' },
+      headerBackImage: () => (
+        <Ionicons name="arrow-back" size={24} color="#60d3e1" style={{ marginLeft: 10 }} />
+      ),
+    }}
+  >
+    <EntriesStack.Screen name="Entries Screen" component={Entries} />
+    <EntriesStack.Screen name="CompetitionDetails" component={CompetitionDetails} options={{ title: 'Competition Details' }} />
+    <EntriesStack.Screen name="SubmitComp" component={SubmitComp} />
+    <EntriesStack.Screen name="SC_ig" component={SC_ig} />
+    <EntriesStack.Screen name="SC_snap" component={SC_snap} />
+    <EntriesStack.Screen name="SC_tik" component={SC_tik} />
+  </EntriesStack.Navigator>
 );
 
 const TabNavigator = () => {
@@ -90,7 +111,11 @@ const TabNavigator = () => {
           {role === 'influencer' ? (
             <>
               <Tab.Screen name="Competitions" component={CompetitionStackNavigator} options={{ headerShown: false }} />
-              <Tab.Screen name="My Entries" component={Entries} options={{ headerShown: false }} />
+              <Tab.Screen 
+                name="My Entries" 
+                component={EntriesStackNavigator} 
+                options={{ headerShown: false }} 
+              />
               <Tab.Screen
                 name="Profile"
                 component={Profiles}
