@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import mockData from '../mockData';
 import styles from '../styles/styles';
 
@@ -18,6 +18,7 @@ const Profiles = () => {
   const competitionsEntered = mockData.submitted_entries.filter(e => e.profile_id === profileId).length;
 
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <View style={styles.container}>
       {/* Profile Header Row */}
       <View style={[styles.row, { marginBottom: 15 }]}>
@@ -41,7 +42,7 @@ const Profiles = () => {
         }]}>
           <View style={{ alignItems: 'center' }}>
             <Text style={styles.prizeText}>{competitionsWon}</Text>
-            <Text style={styles.competitionNiche}>Comps Won</Text>
+            <Text style={styles.competitionNiche}>Competitions Won</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <Text style={styles.prizeText}>${totalWon}</Text>
@@ -80,6 +81,7 @@ const Profiles = () => {
         </TouchableOpacity>
       </View>
     </View>
+    </SafeAreaView>
   );
 };
 
