@@ -18,8 +18,13 @@ const Profiles = () => {
   const competitionsEntered = mockData.submitted_entries.filter(e => e.profile_id === profileId).length;
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-    <View style={styles.container}>
+    <SafeAreaView style={styles.safeArea}>
+    {/* Username Header */}
+<View style={styles.profileHeader}>
+  <Text style={styles.profileHeaderText}>{profile?.username}</Text>
+</View>
+
+  <View style={styles.container}>
       {/* Profile Header Row */}
       <View style={[styles.row, { marginBottom: 15 }]}>
         {/* Avatar */}
@@ -57,7 +62,6 @@ const Profiles = () => {
 
       {/* Bio Section */}
       <View style={{ marginBottom: 20 }}>
-        <Text style={styles.competitionTitle}>{profile?.username}</Text>
         <Text style={[styles.competitionNiche, { lineHeight: 20 }]}>
           {profile?.name || 'User'} • Digital Creator • 
           Entered {competitionsEntered} competitions

@@ -1,4 +1,4 @@
-// green to remember: #8b51ff
+// purple to remember: #8b51ff
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -559,6 +559,22 @@ leaderboardAvatar: {
   height: 50,
   borderRadius: 25,
   marginRight: 10,
+},
+profileHeader: {
+  backgroundColor: '#8b51ff',
+  padding: 10
+},
+profileHeaderText: {
+  color: 'white',
+  fontSize: 20,
+  fontWeight: 'bold',
+  textAlign: 'left',
+  marginLeft: 20,
+  textTransform: 'lowercase',
+},
+safeArea: {
+  flex: 1,
+  backgroundColor: '#8b51ff',
 },
 
 });
