@@ -15,7 +15,6 @@ const Profiles = () => {
 
   const totalWon = competitionsWon * 500;
   const totalFollowers = linkedAccounts.reduce((sum, acc) => sum + (acc.followers || 0), 0);
-  const competitionsEntered = mockData.submitted_entries.filter(e => e.profile_id === profileId).length;
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -47,7 +46,7 @@ const Profiles = () => {
         }]}>
           <View style={{ alignItems: 'center' }}>
             <Text style={styles.prizeText}>{competitionsWon}</Text>
-            <Text style={styles.competitionNiche}>Competitions Won</Text>
+            <Text style={styles.competitionNiche}>Prizes Won</Text>
           </View>
           <View style={{ alignItems: 'center' }}>
             <Text style={styles.prizeText}>${totalWon}</Text>
@@ -63,8 +62,7 @@ const Profiles = () => {
       {/* Bio Section */}
       <View style={{ marginBottom: 20 }}>
         <Text style={[styles.competitionNiche, { lineHeight: 20 }]}>
-          {profile?.name || 'User'} • Digital Creator • 
-          Entered {competitionsEntered} competitions
+        • Digital Creator •     
         </Text>
       </View>
 
@@ -73,14 +71,13 @@ const Profiles = () => {
         justifyContent: 'space-between', 
         marginBottom: 20 
       }]}>
-        <TouchableOpacity style={[styles.button, { 
+        <TouchableOpacity style={[styles.searchButton, { 
           flex: 1, 
           marginRight: 10, 
-          backgroundColor: 'white' 
         }]}>
-          <Text style={[styles.text, { color: '#8b51ff' }]}>Edit Profile</Text>
+          <Text style={styles.text}>Edit Profile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.searchButton, { flex: 1 }]}>
+        <TouchableOpacity style={[styles.searchButton, { flex: 1 }]}>
           <Text style={styles.text}>Add Content</Text>
         </TouchableOpacity>
       </View>
