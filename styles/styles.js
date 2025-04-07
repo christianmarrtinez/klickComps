@@ -488,10 +488,9 @@ authLink: {
   fontSize: 16,
   marginTop: 20,
 },
-  // New styles for SC_snap.js
   gridContainer: {
     alignItems: 'center',
-    paddingBottom: 80, // Add space for the submit button
+    paddingBottom: 80, 
   },
   postContainer: {
     margin: 5,
@@ -575,7 +574,7 @@ profileHeaderText: {
 safeArea: {
   flex: 1,
   backgroundColor: '#8b51ff',
-},
+}
 
 });
 

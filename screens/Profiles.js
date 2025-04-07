@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import mockData from '../mockData';
 import styles from '../styles/styles';
+import { useNavigation } from '@react-navigation/native';
 
 const Profiles = () => {
+  const navigation = useNavigation();
   const profileId = global.currentProfile?.id;
   const profile = mockData.profiles.find(p => p.id === profileId);
   const linkedAccounts = mockData.linked_accounts.filter(acc => acc.profile_id === profileId);
@@ -16,12 +18,16 @@ const Profiles = () => {
   const totalWon = competitionsWon * 500;
   const totalFollowers = linkedAccounts.reduce((sum, acc) => sum + (acc.followers || 0), 0);
 
+
+  useEffect(() => {
+    if (profile && profile.username) {
+        navigation.setOptions({ title: profile.username });
+    }
+}, [navigation, profile]);
+
   return (
     <SafeAreaView style={styles.safeArea}>
     {/* Username Header */}
-<View style={styles.profileHeader}>
-  <Text style={styles.profileHeaderText}>{profile?.username}</Text>
-</View>
 
   <View style={styles.container}>
       {/* Profile Header Row */}
@@ -71,12 +77,15 @@ const Profiles = () => {
         justifyContent: 'space-between', 
         marginBottom: 20 
       }]}>
-        <TouchableOpacity style={[styles.searchButton, { 
-          flex: 1, 
-          marginRight: 10, 
-        }]}>
-          <Text style={styles.text}>Edit Profile</Text>
-        </TouchableOpacity>
+        <TouchableOpacity
+                        style={[styles.searchButton, {
+                            flex: 1,
+                            marginRight: 10,
+                        }]}
+                        onPress={() => navigation.navigate('EditProfile', { profileId })}
+                    >
+                        <Text style={styles.text}>Edit Profile</Text>
+                    </TouchableOpacity>
         <TouchableOpacity style={[styles.searchButton, { flex: 1 }]}>
           <Text style={styles.text}>Add Content</Text>
         </TouchableOpacity>

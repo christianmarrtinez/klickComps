@@ -15,10 +15,12 @@ import SC_ig from '../screens/SC_ig';
 import SC_snap from '../screens/SC_snap';
 import SC_tik from '../screens/SC_tik';
 import styles from '../styles/styles';
+import EditProfile from '../screens/EditProfile';
 
 const Tab = createBottomTabNavigator();
 const CompetitionStack = createNativeStackNavigator();
 const EntriesStack = createNativeStackNavigator();
+const ProfilesStack = createNativeStackNavigator();
 
 const CompetitionStackNavigator = () => (
   <CompetitionStack.Navigator
@@ -90,6 +92,24 @@ const EntriesStackNavigator = () => (
   </EntriesStack.Navigator>
 );
 
+
+const ProfilesStackNavigator = () => (
+  <ProfilesStack.Navigator
+    screenOptions={{
+      headerTintColor: '#fff',
+      headerTitleStyle: { color: '#8b51ff' },
+      headerStyle: { backgroundColor: '#8b51ff' },
+      headerBackTitleStyle: { color: '#8b51ff' },
+      headerBackImage: () => (
+        <Ionicons name="arrow-back" size={24} color="#60d3e1" style={{ marginLeft: 10 }} />
+      ),
+    }}
+  >
+    <ProfilesStack.Screen name="Profiles" component={Profiles} options={{ title: '' }} />
+    <ProfilesStack.Screen name="EditProfile" component={EditProfile} />
+  </ProfilesStack.Navigator>
+);
+
 const TabNavigator = () => {
     const [role, setRole] = useState('influencer'); 
     const [showSwitchPopup, setShowSwitchPopup] = useState(false);
@@ -148,7 +168,7 @@ const TabNavigator = () => {
               />
               <Tab.Screen
                 name="Profile"
-                component={Profiles}
+                component={ProfilesStackNavigator}
                 options={{
                   headerShown: false,
                   tabBarButton: (props) => (

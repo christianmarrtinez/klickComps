@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, SafeAreaView } from 'react-native';
+import { View, Text, TextInput, SafeAreaView, TouchableOpacity } from 'react-native'; 
 import mockData from '../mockData';
 import styles from '../styles/styles';
 
@@ -35,7 +35,7 @@ const EditProfile = ({ navigation, route }) => {
     }
 
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <Text style={styles.authTitle}>Edit Profile</Text>
             <TextInput
                 style={styles.authInput}
@@ -70,7 +70,7 @@ const EditProfile = ({ navigation, route }) => {
             <TouchableOpacity style={styles.authButton} onPress={handleSave}>
                 <Text style={styles.authButtonText}>Save</Text>
             </TouchableOpacity>
-        </SafeAreaView>
+            </View>
     );
 };
 
