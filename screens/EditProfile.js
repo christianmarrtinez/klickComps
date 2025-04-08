@@ -18,9 +18,9 @@ const EditProfile = ({ navigation, route }) => {
             setProfile(foundProfile);
             setUsername(foundProfile.username);
             setAvatar(foundProfile.avatar);
-            setBio(foundProfile.bio);
-            setPhoneNumber(foundProfile.phoneNumber);
-            setEmail(foundProfile.email);
+            setBio(foundProfile.bio || '');
+            setPhoneNumber(foundProfile.phone_number || '');
+            setEmail(foundProfile.email || '');
         }
     }, [profileId]);
 

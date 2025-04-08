@@ -64,14 +64,20 @@ const mockData = {
           username: 'user1',
           password: 'password1', 
           name: 'User One',
-          avatar: 'https://via.placeholder.com/100.png?text=User1'
+          avatar: 'https://via.placeholder.com/100.png?text=User1',
+          email: 'user1@example.com',
+          bio: 'Passionate about design and innovation.', 
+          phone_number: '123-456-7890'
         },
         {
           id: 102,
           username: 'user2',
           password: 'password2',
           name: 'User Two',
-          avatar: 'https://via.placeholder.com/100.png?text=User2'
+          avatar: 'https://via.placeholder.com/100.png?text=User2',
+          email: 'user2@example.com',
+          bio: 'Enthusiastic about technology and entrepreneurship.',
+          phone_number: '987-654-3210'
         }
       ],
     linked_accounts: [

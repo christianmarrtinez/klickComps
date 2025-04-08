@@ -67,9 +67,9 @@ const Profiles = () => {
 
       {/* Bio Section */}
       <View style={{ marginBottom: 20 }}>
-        <Text style={[styles.competitionNiche, { lineHeight: 20 }]}>
-        • Digital Creator •     
-        </Text>
+      <Text style={[styles.competitionNiche, { lineHeight: 20 }]}>
+            {profile?.bio || 'No bio yet'}
+          </Text>
       </View>
 
       {/* Action Buttons */}
