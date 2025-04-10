@@ -574,7 +574,14 @@ profileHeaderText: {
 safeArea: {
   flex: 1,
   backgroundColor: '#8b51ff',
-}
+},
+inputLabel: {
+  fontSize: 16,
+  fontWeight: 'bold',
+  marginBottom: 5,
+  marginTop: 10,
+  color: '#8b51ff',
+},
 
 });
 

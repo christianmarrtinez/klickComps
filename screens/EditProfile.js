@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, SafeAreaView, TouchableOpacity } from 'react-native'; 
+import { View, Text, TextInput, SafeAreaView, TouchableOpacity } from 'react-native';
 import mockData from '../mockData';
 import styles from '../styles/styles';
 
@@ -25,9 +25,8 @@ const EditProfile = ({ navigation, route }) => {
     }, [profileId]);
 
     const handleSave = () => {
-        // Implement logic to update the profile data in your mockData or backend
         console.log('Profile updated:', { username, avatar, bio, phoneNumber, email });
-        navigation.goBack(); // Navigate back to the Profiles screen
+        navigation.goBack();
     };
 
     if (!profile) {
@@ -37,40 +36,51 @@ const EditProfile = ({ navigation, route }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.authTitle}>Edit Profile</Text>
+
+            <Text style={styles.inputLabel}>Username</Text>
             <TextInput
                 style={styles.authInput}
                 placeholder="Username"
                 value={username}
                 onChangeText={setUsername}
             />
+
+            <Text style={styles.inputLabel}>Avatar URL</Text>
             <TextInput
                 style={styles.authInput}
                 placeholder="Avatar URL"
                 value={avatar}
                 onChangeText={setAvatar}
             />
+
+            <Text style={styles.inputLabel}>Bio</Text>
             <TextInput
                 style={styles.authInput}
                 placeholder="Bio"
                 value={bio}
                 onChangeText={setBio}
             />
+
+            <Text style={styles.inputLabel}>Phone Number</Text>
             <TextInput
                 style={styles.authInput}
                 placeholder="Phone Number"
                 value={phoneNumber}
                 onChangeText={setPhoneNumber}
             />
+
+            <Text style={styles.inputLabel}>Email</Text>
             <TextInput
                 style={styles.authInput}
                 placeholder="Email"
                 value={email}
                 onChangeText={setEmail}
             />
+
             <TouchableOpacity style={styles.authButton} onPress={handleSave}>
                 <Text style={styles.authButtonText}>Save</Text>
             </TouchableOpacity>
-            </View>
+        </View>
     );
 };
 
