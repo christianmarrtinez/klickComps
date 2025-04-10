@@ -16,6 +16,7 @@ import SC_snap from '../screens/SC_snap';
 import SC_tik from '../screens/SC_tik';
 import styles from '../styles/styles';
 import EditProfile from '../screens/EditProfile';
+import AddContent from '../screens/AddContent';
 import mockData from '../mockData';
 
 const Tab = createBottomTabNavigator();
@@ -128,6 +129,14 @@ const ProfilesStackNavigator = () => (
       component={EditProfile} 
       options={{ 
         title: 'Edit Profile',
+        headerTitleStyle: { color: 'white' },
+      }} 
+    />
+    <ProfilesStack.Screen 
+      name="AddContent" 
+      component={AddContent} 
+      options={{ 
+        title: 'Add Content',
         headerTitleStyle: { color: 'white' },
       }} 
     />

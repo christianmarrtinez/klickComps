@@ -84,9 +84,12 @@ const Profiles = () => {
                 >
                     <Text style={styles.text}>Edit Profile</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.searchButton, { flex: 1 }]}>
-                    <Text style={styles.text}>Add Content</Text>
-                </TouchableOpacity>
+                <TouchableOpacity 
+                  style={[styles.searchButton, { flex: 1 }]}
+                  onPress={() => navigation.navigate('AddContent')}
+              >
+                  <Text style={styles.text}>Add Content</Text>
+              </TouchableOpacity>
             </View>
         </View>
     );
