@@ -563,13 +563,20 @@ profileHeader: {
   backgroundColor: '#8b51ff',
   padding: 10
 },
+profileHeaderContainer: {
+  height: 100, 
+  backgroundColor: '#8b51ff',
+  flexDirection: 'row',
+  alignItems: 'center',
+  paddingHorizontal: 25,
+},
 profileHeaderText: {
-  color: 'white',
-  fontSize: 20,
+  color: 'white', 
+  fontSize: 18, 
   fontWeight: 'bold',
   textAlign: 'left',
-  marginLeft: 20,
-  textTransform: 'lowercase',
+  paddingTop: 50,
+  marginLeft: 10, // Adjust this value to move text right or left
 },
 safeArea: {
   flex: 1,

@@ -16,6 +16,7 @@ import SC_snap from '../screens/SC_snap';
 import SC_tik from '../screens/SC_tik';
 import styles from '../styles/styles';
 import EditProfile from '../screens/EditProfile';
+import mockData from '../mockData';
 
 const Tab = createBottomTabNavigator();
 const CompetitionStack = createNativeStackNavigator();
@@ -97,16 +98,39 @@ const ProfilesStackNavigator = () => (
   <ProfilesStack.Navigator
     screenOptions={{
       headerTintColor: '#fff',
-      headerTitleStyle: { color: '#8b51ff' },
-      headerStyle: { backgroundColor: '#8b51ff' },
-      headerBackTitleStyle: { color: '#8b51ff' },
+      headerStyle: { 
+        backgroundColor: '#8b51ff',
+      },
+      headerBackTitleVisible: false,
       headerBackImage: () => (
-        <Ionicons name="arrow-back" size={24} color="#60d3e1" style={{ marginLeft: 10 }} />
+        <Ionicons name="arrow-back" size={24} color="white" style={{ marginLeft: 10 }} />
       ),
     }}
   >
-    <ProfilesStack.Screen name="Profiles" component={Profiles} options={{ title: '' }} />
-    <ProfilesStack.Screen name="EditProfile" component={EditProfile} />
+    <ProfilesStack.Screen 
+      name="Profiles" 
+      component={Profiles} 
+      options={({ navigation, route }) => ({ 
+        header: ({ options, route, navigation }) => {
+          const profile = mockData.profiles.find(p => p.id === global.currentProfile?.id);
+          return (
+            <View style={styles.profileHeaderContainer}>
+              <Text style={styles.profileHeaderText}>
+                {profile?.username || 'Profile'}
+              </Text>
+            </View>
+          );
+        }
+      })} 
+    />
+    <ProfilesStack.Screen 
+      name="EditProfile" 
+      component={EditProfile} 
+      options={{ 
+        title: 'Edit Profile',
+        headerTitleStyle: { color: 'white' },
+      }} 
+    />
   </ProfilesStack.Navigator>
 );
 
