@@ -22,22 +22,22 @@ const AddContent = () => {
 
   const renderAccount = ({ item }) => {
     if (item.isAddButton) {
-      return (
-        <TouchableOpacity
-          style={[styles.accountButton, { 
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }]}
-          onPress={() => navigation.navigate('EditProfile', { profileId })}
-        >
-          <Ionicons name="add-circle" size={24} color="#8b51ff" />
-          <Text style={[styles.accountUsername, { marginLeft: 10 }]}>
-            Link New Account
-          </Text>
-        </TouchableOpacity>
-      );
-    }
+        return (
+          <TouchableOpacity
+            style={[styles.accountButton, { 
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }]}
+            onPress={() => navigation.navigate('LinkAccount')}
+          >
+            <Ionicons name="add-circle" size={24} color="#8b51ff" />
+            <Text style={[styles.accountUsername, { marginLeft: 10 }]}>
+              Link New Account
+            </Text>
+          </TouchableOpacity>
+        );
+      }
 
     return (
       <TouchableOpacity

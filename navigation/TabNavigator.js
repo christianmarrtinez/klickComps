@@ -17,6 +17,7 @@ import SC_tik from '../screens/SC_tik';
 import styles from '../styles/styles';
 import EditProfile from '../screens/EditProfile';
 import AddContent from '../screens/AddContent';
+import LinkAccount from '../screens/LinkAccount';
 import mockData from '../mockData';
 
 const Tab = createBottomTabNavigator();
@@ -137,6 +138,14 @@ const ProfilesStackNavigator = () => (
       component={AddContent} 
       options={{ 
         title: 'Add Content',
+        headerTitleStyle: { color: 'white' },
+      }} 
+    />
+    <ProfilesStack.Screen 
+      name="LinkAccount" 
+      component={LinkAccount} 
+      options={{ 
+        title: 'Link Account',
         headerTitleStyle: { color: 'white' },
       }} 
     />
