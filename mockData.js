@@ -105,6 +105,24 @@ const mockData = {
         { id: 2, competition_id: 2, profile_id: 102, content_id: 8, submitted_at: '2025-03-16T11:00:00Z', active: false, views: 800 },
         {id: 3, competition_id: 1, profile_id: 102, content_id: 9, submitted_at: "2025-04-01T21:25:50.213Z", active: true, views: 2200}
     ],
+    profile_content: [
+        {
+            id: 1,
+            profile_id: 101,
+            linked_account_id: 1,
+            content_id: 3,
+            created_at: '2025-03-15T10:00:00Z',
+            active: 1
+        },
+        {
+            id: 2,
+            profile_id: 102,
+            linked_account_id: 4,
+            content_id: 10,
+            created_at: '2025-03-16T11:00:00Z',
+            active: 1
+        }
+    ],
 };
 
 export default mockData;

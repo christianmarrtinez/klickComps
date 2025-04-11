@@ -18,6 +18,7 @@ import styles from '../styles/styles';
 import EditProfile from '../screens/EditProfile';
 import AddContent from '../screens/AddContent';
 import LinkAccount from '../screens/LinkAccount';
+import AC_fin from '../screens/AC_fin';
 import mockData from '../mockData';
 
 const Tab = createBottomTabNavigator();
@@ -146,6 +147,14 @@ const ProfilesStackNavigator = () => (
       component={LinkAccount} 
       options={{ 
         title: 'Link Account',
+        headerTitleStyle: { color: 'white' },
+      }} 
+    />
+    <ProfilesStack.Screen 
+      name="AC_fin" 
+      component={AC_fin} 
+      options={{ 
+        title: 'Add Content',
         headerTitleStyle: { color: 'white' },
       }} 
     />

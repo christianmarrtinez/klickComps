@@ -39,27 +39,28 @@ const AddContent = () => {
         );
       }
 
-    return (
-      <TouchableOpacity
-        style={styles.accountButton}
-        onPress={() => {
-          // Navigate to content selection for this account
-          navigation.navigate('AccountContent', { 
-            accountId: item.id,
-            social: item.social 
-          });
-        }}
-      >
-        <Image source={item.profile_pic} style={styles.accountImage} />
-        <View>
-          <Text style={styles.accountUsername}>{item.username}</Text>
-          <Text style={styles.competitionNiche}>
-            {item.social === 'ig' ? 'Instagram' : 
-             item.social === 'snap' ? 'Snapchat' : 'TikTok'} • {item.followers.toLocaleString()} followers
-          </Text>
-        </View>
-      </TouchableOpacity>
-    );
+      return (
+        <TouchableOpacity
+          style={styles.accountButton}
+          onPress={() => {
+            // Navigate to AC_fin with account and social platform info
+            navigation.navigate('AC_fin', { 
+              accountId: item.id,
+              social: item.social,
+              accountUsername: item.username
+            });
+          }}
+        >
+          <Image source={item.profile_pic} style={styles.accountImage} />
+          <View>
+            <Text style={styles.accountUsername}>{item.username}</Text>
+            <Text style={styles.competitionNiche}>
+              {item.social === 'ig' ? 'Instagram' : 
+               item.social === 'snap' ? 'Snapchat' : 'TikTok'} • {item.followers.toLocaleString()} followers
+            </Text>
+          </View>
+        </TouchableOpacity>
+      );
   };
 
   return (
