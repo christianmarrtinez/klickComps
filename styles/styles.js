@@ -589,7 +589,67 @@ inputLabel: {
   marginTop: 10,
   color: '#8b51ff',
 },
-
+segmentedControl: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  marginBottom: 20,
+  backgroundColor: '#f0f0f0',
+  borderRadius: 8,
+  padding: 5,
+},
+segment: {
+  flex: 1,
+  padding: 10,
+  alignItems: 'center',
+  borderRadius: 5,
+},
+activeSegment: {
+  backgroundColor: '#8b51ff',
+},
+segmentText: {
+  color: '#666',
+  fontWeight: 'bold',
+},
+activeSegmentText: {
+  color: 'white',
+},
+postContainer: {
+  width: '31%',
+  aspectRatio: 1,
+  margin: '1%',
+  borderRadius: 5,
+  overflow: 'hidden',
+  position: 'relative',
+},
+postImage: {
+  width: '100%',
+  height: '100%',
+},
+postOverlay: {
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  right: 0,
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  padding: 5,
+},
+postViews: {
+  color: 'white',
+  fontSize: 12,
+},
+platformBadge: {
+  color: 'white',
+  fontSize: 10,
+  marginTop: 2,
+},
+gridContainer: {
+  paddingBottom: 20,
+},
+emptyText: {
+  textAlign: 'center',
+  color: '#666',
+  marginVertical: 20,
+},
 });
 
 export default styles;
