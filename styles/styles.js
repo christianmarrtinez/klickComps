@@ -650,6 +650,44 @@ emptyText: {
   color: '#666',
   marginVertical: 20,
 },
+socialContainer: {
+  flex: 1,
+  backgroundColor: 'white',
+  padding: 20,
+},
+iconsWrapper: {
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+  marginTop: 40,
+},
+iconCircle: {
+  width: 80,
+  height: 80,
+  borderRadius: 40,
+  borderWidth: 2,
+  borderColor: '#8b51ff',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginHorizontal: 10,
+  marginBottom: 10,
+  backgroundColor: 'transparent', // remove background
+},
+
+platformImage: {
+  width: 50,
+  height: 50,
+  borderRadius: 25, // crop into a perfect circle
+},
+iconLabel: {
+  marginTop: 6,
+  textAlign: 'center',
+  color: '#8b51ff',
+  fontWeight: '600',
+  fontSize: 14,
+},
+
+
 });
 
 export default styles;
