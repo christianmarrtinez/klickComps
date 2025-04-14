@@ -16,23 +16,23 @@ const LinkAccount = () => {
 
   return (
     <View style={styles.socialContainer}>
-      <View style={styles.iconsWrapper}>
-        {platforms.map((platform, index) => (
-          <TouchableOpacity
-            key={index}
-            style={styles.iconCircle}
-            onPress={() => handlePress(platform.name)}
-          >
-            <Image
-              source={platform.image}
-              style={styles.platformImage}
-              resizeMode="contain"
-            />
+  <View style={styles.iconsWrapper}>
+    {platforms.map((platform, index) => (
+      <TouchableOpacity
+        key={index}
+        style={styles.iconCircle}
+        onPress={() => handlePress(platform.name)}
+      >
+        <Image
+          source={platform.image}
+          style={styles.platformImage}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
+    ))}
+  </View>
+</View>
 
-          </TouchableOpacity>
-        ))}
-      </View>
-    </View>
   );
 };
 

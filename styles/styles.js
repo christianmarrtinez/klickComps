@@ -652,33 +652,32 @@ emptyText: {
 },
 socialContainer: {
   flex: 1,
-  backgroundColor: 'white',
-  padding: 20,
+  justifyContent: 'center',
+  alignItems: 'center',
 },
+
 iconsWrapper: {
   flexDirection: 'row',
-  justifyContent: 'space-around',
+  justifyContent: 'center',
   alignItems: 'center',
-  marginTop: 40,
+  gap: 20, // or use margin in iconCircle if gap is unsupported
 },
+
 iconCircle: {
-  width: 80,
-  height: 80,
-  borderRadius: 40,
-  borderWidth: 2,
-  borderColor: '#8b51ff',
+  width: 70,
+  height: 70,
+  borderRadius: 35,
+  backgroundColor: '#eee',
   justifyContent: 'center',
   alignItems: 'center',
   marginHorizontal: 10,
-  marginBottom: 10,
-  backgroundColor: 'transparent', // remove background
 },
 
 platformImage: {
-  width: 50,
-  height: 50,
-  borderRadius: 25, // crop into a perfect circle
+  width: 40,
+  height: 40,
 },
+
 iconLabel: {
   marginTop: 6,
   textAlign: 'center',
